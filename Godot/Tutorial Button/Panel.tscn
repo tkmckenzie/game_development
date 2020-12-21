@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://testscript.gd" type="Script" id=1]
+
+[node name="Panel" type="Panel"]
+margin_right = 320.0
+margin_bottom = 192.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 88.0
+margin_top = 64.0
+margin_right = 239.0
+margin_bottom = 80.0
+text = "Button pressed 0 times"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 120.0
+margin_top = 128.0
+margin_right = 204.0
+margin_bottom = 148.0
+text = "Press me!!!"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
